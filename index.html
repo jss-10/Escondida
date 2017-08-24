@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script language="javascript" src="tabla.js"></script>
+    <title>Punto de venta</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="page-header">
+                <h1>La Escondida</h1>
+            </div>           
+        </div>
+    </header>
+    <div class="container">
+        <section class="main">
+            <form action="#" onsubmit="false" autocomplete="off">
+                <div class="form-group">
+                    <input type="text" placeholder="Búsqueda" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="desc">Descripción</label>
+                    <input type="text" class="form-control" id="txt_descripcion">
+                </div>
+                    
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="precio">Precio de venta</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="precio">Existencia</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">#</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="form-group">
+                <button class="btn btn-default btn-lg" style="float: right;margin-bottom: 1rem" id="btn_agregar" onclick="agrega_elemento()">Agregar</button>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table table-hover" id="tbl_productos">
+                    <tr>
+                        <th>Eliminar</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
