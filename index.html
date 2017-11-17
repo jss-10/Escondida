@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <script language="javascript" src="tabla.js"></script>
+    <script language="javascript" src="conexion.js"></script>
     <title>Punto de venta</title>
 </head>
-<body>
+
+<body onload="foco()">
     <header>
         <div class="container">
             <div class="page-header">
@@ -17,9 +19,9 @@
     </header>
     <div class="container">
         <section class="main">
-            <form action="#" onsubmit="false" autocomplete="off">
+            <form action="#" onsubmit="false" autocomplete="off" id="formulario">
                 <div class="form-group">
-                    <input type="text" placeholder="Búsqueda" class="form-control">
+                    <input type="text" placeholder="Búsqueda" class="form-control" id="txt_buscar">
                 </div>
                 
                 <div class="form-group">
@@ -50,18 +52,35 @@
                 </div>
             </form>
             
-            <div class="form-group">
-                <button class="btn btn-default btn-lg" style="float: right;margin-bottom: 1rem" id="btn_agregar" onclick="agrega_elemento()">Agregar</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-lg" style="float: right;margin-bottom: 1rem" id="btn_conecta" onclick="conecta()">Buscar</button>
+                        <button class="btn btn-primary btn-lg" style="float: right;margin-bottom: 1rem" id="btn_agregar" onclick="agregarFila()">Agregar</button>
+                        <button class="btn btn-primary btn-lg" style="float: right;margin-bottom: 1rem" id="btn_conecta" onclick="conecta()">Finalizar</button>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <h1>Total: $</h1>
+                </div>
+                
+                <div class="col-md-3">
+                    <h1>0.0</h1>
+                </div>
             </div>
-            
+                        
             <div class="table-responsive">
                 <table class="table table-hover" id="tbl_productos">
-                    <tr>
-                        <th>Eliminar</th>
-                        <th>Descripcion</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl_cuerpo"></tbody>
                 </table>
             </div>
         </section>
