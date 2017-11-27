@@ -1,0 +1,14 @@
+#contenedor{
+    margin: auto;
+		width: 1050px;
+	}
+
+button{
+    margin: auto;
+    padding: 0;
+    
+}
+
+#Jtabla, #Jtable, button, input{
+    margin-bottom: 30px;
+}
